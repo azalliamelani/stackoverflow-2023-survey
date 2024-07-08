@@ -24,7 +24,7 @@ streamlit run dashboard.py
 
 ## You can access the dashboard through this link! :ribbon:
 ```
-https://azalliamelani-bike-sharing-analysis.streamlit.app/
+https://stackoverflow-2023-survey-dashboard.streamlit.app/
 ```
 
 Thank you for visiting my project!
