@@ -144,7 +144,7 @@ fig_edu = px.bar(
 )
 st.plotly_chart(fig_edu)
 
-# Country distribution
+# Assuming filtered_df is already defined
 # Get the top 10 countries by respondent count
 st.subheader("Top 10 Respondent Based On Country Distribution :earth_americas:")
 top_countries = filtered_df['Country'].value_counts().head(10).reset_index()
@@ -169,6 +169,24 @@ fig_country = px.choropleth(
     color_continuous_scale=custom_color_scale
 )
 st.plotly_chart(fig_country)
+
+# Add the explanation box
+explanation_html = """
+<div style="background-color: #FFCBCB; padding: 10px; border-radius: 5px;">
+    <h4>Explanation For Each Country</h4>
+    <p>1. United States of America: 13,606 Respondents</p>
+    <p>2. Germany: 6,052 Respondents</p>
+    <p>3. India: 5,097 Respondents</p>
+    <p>4. United Kingdom of Great Britain and Northern Ireland: 4,016 Respondents</p>
+    <p>5. Canada: 2,686 Respondents</p>
+    <p>6. France: 2,496 Respondents</p>
+    <p>7. Poland: 2,154 Respondents</p>
+    <p>8. Netherlands: 1,914 Respondents</p>
+    <p>9. Australia: 2,078 Respondents</p>
+    <p>10. Brazil: 1,774 Respondents</p>
+</div>
+"""
+st.markdown(explanation_html, unsafe_allow_html=True)
 
 # Divider
 st.markdown("<hr>", unsafe_allow_html=True)
